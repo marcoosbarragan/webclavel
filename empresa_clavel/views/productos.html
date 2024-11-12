@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos | Clavel Shop</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="../../css/estilos.css">
+
+    <!-- Cargar Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+<header>
+    <img src="https://imgur.com/20gHVDq.jpg" id="logo" alt="Logo Clavel Shop" width="150" height="150">
+    <nav>
+        <h1 class="nombre-sitio">Clavel Shop</h1>
+        <ul>
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="views/productos.html" class="nav-link">Productos</a></li>
+            <li><a href="views/presupuesto.html" class="nav-link">Presupuesto</a></li>
+            <li><a href="views/contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Nuestros Productos</h2>
+            <p>Explora nuestra colección de productos únicos inspirados en la esencia de Sevilla.</p>
+            
+            <!-- Galería en cuadrícula -->
+            <div class="galeria">
+                <div class="producto">
+                    <img src="https://imgur.com/G0yI4Wj.jpg" alt="Falda Vaquera Corta Beige">
+                    <p>Falda Vaquera Corta Beige</p>
+                </div>
+                <div class="producto">
+                    <img src="https://imgur.com/BOyGSjv.jpg" alt="Gabardina Beige">
+                    <p>Gabardina Beige</p>
+                </div>
+                <div class="producto">
+                    <img src="https://imgur.com/LuE7gWe.jpg" alt="Pantalón Largo Verde">
+                    <p>Pantalón Largo Verde</p>
+                </div>
+                <div class="producto">
+                    <img src="https://imgur.com/u5RczCf.jpg" alt="Vestido con Estampado Floral Azul">
+                    <p>Vestido con Estampado Floral Azul</p>
+                </div>
+                <div class="producto">
+                    <img src="https://imgur.com/zkBowGd.jpg" alt="Pantalón de Lana Cuadros Marrón">
+                    <p>Pantalón de Lana Cuadros Marrón</p>
+                </div>
+                <!-- Añadir más productos según sea necesario -->
+            </div>
+        </section>
+    </main>
+
+>
+
+         <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 CLAVEL SHOP</p>
+        <p>Calle San Jacinto 10, Sevilla, España</p>
+
+        <!-- Redes Sociales -->
+        <div id="redes-sociales">
+            <a href="https://x.com/ClavelShop" target="_blank">
+                <img src="https://imgur.com/QBAnrEO.jpg"  alt="" class="icono-red" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/clavelshop9/" target="_blank">
+                <img src="https://imgur.com/AE2qIfi.jpg"  alt="" class="icono-red" width="24" height="24">
+            </a>
+            <a href="https://www.facebook.com/ClavelShop" target="_blank">
+                <img src="https://imgur.com/oJ9ZrHM.jpg" alt="" class="icono-red" width="24" height="24">
+            </a>
+        </div>
+
+        <!-- Aviso legal -->
+        <a href="../../views/vista/legal.html">Aviso Legal</a>
+    </footer>
+
+    <!-- Script para resaltar el enlace activo -->
+    <script>
+        // Obtener el nombre de la página actual (sin la ruta completa)
+        const currentPage = window.location.pathname.split("/").pop(); 
+    
+        // Seleccionar todos los enlaces de navegación
+        const navLinks = document.querySelectorAll('nav a');
+    
+        navLinks.forEach(link => {
+            // Obtener solo la parte relevante del href (el archivo o directorio)
+            const linkPath = link.getAttribute('href').split("/").pop();
+            
+            // Si la ruta del enlace coincide con la de la página actual, se añade la clase 'activo'
+            if (currentPage === linkPath) {
+                link.classList.add('activo');
+            }
+        });
+    </script>
+    
+</body>
+</html>

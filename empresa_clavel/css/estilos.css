@@ -1,0 +1,205 @@
+:root {
+    --color-primario: #726756;
+    --color-secundario: #FFB75D;
+    --color-terciario: #A2747B;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: var(--color-primario);
+    padding: 20px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    justify-content: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Resalta el enlace activo */
+nav a.activo {
+    font-weight: bold;
+    color: var(--color-secundario); /* Color del texto en amarillo */
+}
+
+nav a:hover {
+    color: var(--color-secundario); /* Color del texto al pasar el ratón */
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    background-color: var(--color-terciario);
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-secundario);
+}
+
+/* Galería de productos */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.producto {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* Formulario de presupuesto */
+.presupuesto-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presupuesto-form label {
+    font-weight: bold;
+    color: var(--color-primario);
+    text-align: left;
+}
+
+.presupuesto-form input[type="text"],
+.presupuesto-form input[type="email"],
+.presupuesto-form input[type="tel"],
+.presupuesto-form textarea,
+.presupuesto-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.presupuesto-form textarea {
+    grid-column: span 2;
+}
+
+.presupuesto-form button {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.presupuesto-form button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilo para enlaces y botones en general */
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secundario);
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilo para el logo */
+header img#logo {
+    display: block;
+    margin: 0 auto; /* Centra el logo horizontalmente */
+    width: 150px; /* Tamaño ajustable */
+    height: auto; /* Mantén la proporción de la imagen */
+    max-width: 100%; /* Evita que se desborde en pantallas pequeñas */
+}
+/* Resalta el enlace activo */
+nav a.activo {
+    font-weight: bold;
+    color: var(--color-secundario); /* Color del enlace activo */
+}

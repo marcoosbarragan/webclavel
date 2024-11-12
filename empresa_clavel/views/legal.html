@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisos Legales | Clavel Shop</title>
+    
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+    <!-- Cargar Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+           <!-- Encabezado -->
+<header>
+    <img src="https://imgur.com/20gHVDq.jpg" id="logo" alt="Logo Clavel Shop" width="150" height="150">
+    <nav>
+        <h1 class="nombre-sitio">Clavel Shop</h1>
+        <ul>
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="views/productos.html" class="nav-link">Productos</a></li>
+            <li><a href="views/presupuesto.html" class="nav-link">Presupuesto</a></li>
+            <li><a href="views/contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Avisos Legales</h2>
+
+            <article>
+                <h3>Identificación de la empresa</h3>
+                <p>Nombre: Clavel Shop</p>
+                <p>Domicilio: Calle San Jacinto 10, Sevilla, España</p>
+                <p>NIF: B12345678</p>
+                <p>Correo electrónico: <a href="mailto:contacto@clavelshop.com">contacto@clavelshop.com</a></p>
+                <p>Teléfono: +34 123 456 789</p>
+            </article>
+
+            <article>
+                <h3>Condiciones de uso</h3>
+                <p>El acceso y uso de este sitio web está sujeto a las siguientes condiciones. Al utilizar este sitio, aceptas estas condiciones. Si no estás de acuerdo, por favor no uses el sitio.</p>
+            </article>
+
+            <article>
+                <h3>Propiedad intelectual</h3>
+                <p>Todo el contenido del sitio web, incluyendo textos, imágenes y logos, es propiedad de Clavel Shop y está protegido por la legislación de propiedad intelectual. Queda prohibida su reproducción total o parcial sin el consentimiento expreso de la empresa.</p>
+            </article>
+
+            <article>
+                <h3>Política de protección de datos</h3>
+                <p>Clavel Shop se compromete a proteger la privacidad de sus usuarios. Los datos personales que se recojan a través del sitio serán tratados de acuerdo con la legislación vigente en materia de protección de datos.</p>
+            </article>
+
+            <article>
+                <h3>Exclusión de responsabilidad</h3>
+                <p>Clavel Shop no se hace responsable de los errores u omisiones en los contenidos del sitio, así como de los daños derivados del uso de la información contenida en el mismo.</p>
+            </article>
+
+            <article>
+                <h3>Modificación del aviso legal</h3>
+                <p>Clavel Shop se reserva el derecho de modificar este aviso legal en cualquier momento. La última actualización se realizó el 5 de noviembre de 2024.</p>
+            </article>
+        </section>
+    </main>
+
+    
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2024 CLAVEL SHOP</p>
+    <p>Calle San Jacinto 10, Sevilla, España</p>
+
+    <!-- Redes Sociales -->
+    <div id="redes-sociales">
+        <a href="https://x.com/ClavelShop" target="_blank">
+            <img src="https://imgur.com/QBAnrEO.jpg"  alt="" class="icono-red" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com/clavelshop9/" target="_blank">
+            <img src="https://imgur.com/AE2qIfi.jpg"  alt="" class="icono-red" width="24" height="24">
+        </a>
+        <a href="https://www.facebook.com/ClavelShop" target="_blank">
+            <img src="https://imgur.com/oJ9ZrHM.jpg" alt="" class="icono-red" width="24" height="24">
+        </a>
+    </div>
+
+
+       <!-- Aviso legal -->
+       <a href="../../views/vista/legal.html">Aviso Legal</a>
+    </footer>
+
+    <!-- Script para resaltar el enlace activo -->
+    <script>
+        // Obtener el nombre de la página actual (sin la ruta completa)
+        const currentPage = window.location.pathname.split("/").pop(); 
+    
+        // Seleccionar todos los enlaces de navegación
+        const navLinks = document.querySelectorAll('nav a');
+    
+        navLinks.forEach(link => {
+            // Obtener solo la parte relevante del href (el archivo o directorio)
+            const linkPath = link.getAttribute('href').split("/").pop();
+            
+            // Si la ruta del enlace coincide con la de la página actual, se añade la clase 'activo'
+            if (currentPage === linkPath) {
+                link.classList.add('activo');
+            }
+        });
+    </script>
+    
+</body>
+</html>

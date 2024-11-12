@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Clavel Shop</title>
+    
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Cargar Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilo para el enlace activo */
+        .nav-link.activo {
+            color: #FFB75D;  /* Color amarillo */
+        }
+    </style>
+</head>
+<body>
+       <!-- Encabezado -->
+<header>
+    <img src="https://imgur.com/20gHVDq.jpg" id="logo" alt="Logo Clavel Shop" width="150" height="150">
+    <nav>
+        <h1 class="nombre-sitio">Clavel Shop</h1>
+        <ul>
+            <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            <li><a href="views/productos.html" class="nav-link">Productos</a></li>
+            <li><a href="views/presupuesto.html" class="nav-link">Presupuesto</a></li>
+            <li><a href="views/contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Quiénes Somos</h2>
+            <p>En Clavel Shop, somos una tienda de ropa con sede en Sevilla dedicada a compartir la esencia y la cultura de nuestra hermosa ciudad. Desde nuestros inicios, hemos buscado ofrecer prendas que no solo sean modernas y elegantes, sino que también reflejen la rica herencia cultural sevillana. Nuestro objetivo es llevar un pedazo de Sevilla a cada rincón del mundo, ofreciendo piezas únicas que combinan tradición y vanguardia.</p>
+            <p>Nuestro equipo trabaja cada día para encontrar diseños que emocionen, inspiren y celebren la diversidad cultural que nos rodea. Creemos que la moda puede ser un vehículo para contar historias, y cada pieza en nuestra tienda lleva consigo una parte de esta narrativa. Si buscas autenticidad y estilo, Clavel Shop es el lugar ideal para ti.</p>
+        </section>
+
+        <section>
+            <h2>Servicios</h2>
+            <p>Ofrecemos una variedad de productos de moda, que incluyen:</p>
+            <ul>
+                <li><strong>Ropa femenina y masculina:</strong> Desde vestidos elegantes hasta ropa casual, nuestra colección está diseñada para todos los gustos y estilos. Confeccionamos piezas de alta calidad que se ajustan tanto a la moda clásica como a las últimas tendencias.</li>
+                <li><strong>Accesorios únicos:</strong> Complementa tu look con nuestros exclusivos accesorios inspirados en la cultura sevillana, como mantones, abanicos y detalles hechos a mano que destacan por su autenticidad.</li>
+                <li><strong>Envíos internacionales:</strong> Hacemos que nuestras prendas sean accesibles para clientes de todo el mundo, asegurando una experiencia de compra fácil y rápida, con opciones de seguimiento en cada pedido.</li>
+                <li><strong>Atención al cliente personalizada:</strong> Nuestro equipo está siempre disponible para ayudarte a encontrar lo que necesitas y responder a tus preguntas, ya sea en la tienda o a través de nuestros canales en línea.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Testimonios</h2>
+            <p>Lo que dicen nuestros clientes:</p>
+            <blockquote>
+                <p>"Clavel Shop me hizo sentir como si estuviera en Sevilla, incluso desde lejos. Sus prendas son hermosas y de alta calidad." - Esperanza G.</p>
+            </blockquote>
+            <blockquote>
+                <p>"Adoro las piezas únicas que ofrecen. Cada vez que uso algo de Clavel Shop, recibo cumplidos." - Juan P.</p>
+            </blockquote>
+            <blockquote>
+                <p>"El servicio al cliente es excepcional, ¡definitivamente volveré por más!" - Asunción R.</p>
+            </blockquote>
+            <p>Nos enorgullece saber que nuestros clientes valoran no solo la calidad de nuestros productos, sino también la experiencia que ofrecemos. Sus opiniones nos inspiran a seguir creciendo y mejorando.</p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 CLAVEL SHOP</p>
+        <p>Calle San Jacinto 10, Sevilla, España</p>
+
+        <!-- Redes Sociales -->
+        <div id="redes-sociales">
+            <a href="https://x.com/ClavelShop" target="_blank">
+                <img src="https://imgur.com/QBAnrEO.jpg"  alt="" class="icono-red" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com/clavelshop9/" target="_blank">
+                <img src="https://imgur.com/AE2qIfi.jpg"  alt="" class="icono-red" width="24" height="24">
+            </a>
+            <a href="https://www.facebook.com/ClavelShop" target="_blank">
+                <img src="https://imgur.com/oJ9ZrHM.jpg" alt="" class="icono-red" width="24" height="24">
+            </a>
+        </div>
+
+        <!-- Aviso legal -->
+        <a href="views/legal.html">Aviso Legal</a>
+    </footer>
+
+    <script>
+        // Obtener el nombre de la página actual (sin la ruta completa)
+        const currentPage = window.location.pathname.split("/").pop(); 
+    
+        // Seleccionar todos los enlaces de navegación
+        const navLinks = document.querySelectorAll('nav a');
+    
+        navLinks.forEach(link => {
+            // Obtener solo la parte relevante del href (el archivo o directorio)
+            const linkPath = link.getAttribute('href').split("/").pop();
+            
+            // Si la ruta del enlace coincide con la de la página actual, se añade la clase 'activo'
+            if (currentPage === linkPath) {
+                link.classList.add('activo');
+            }
+        });
+    </script>
+    
+</body>
+</html>
